@@ -9,7 +9,7 @@ namespace OutsideBoxApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BoxController : ControllerBase
+    public class CodeBoxController : ControllerBase
     {
         [HttpPost]
         public JsonResult Create(string input)
