@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Linq.Expressions;
 
 namespace OutsideBoxApi.Repositories
 {
@@ -24,6 +25,10 @@ namespace OutsideBoxApi.Repositories
         public T Get(Guid id)
         {
             return entities.SingleOrDefault(s => s.Id == id);
+        }
+        public IEnumerable<T> GetOnCondition(Expression<Func<T, bool>> expressionPredicate)
+        {
+            return entities.Where(expressionPredicate);
         }
         public void Insert(T entity)
         {

@@ -13,7 +13,7 @@ namespace OutsideBoxApi.Repositories
         public DatabaseContext(DbContextOptions<DatabaseContext> options)
             : base(options) { }
 
-        public DbSet<ShareableCode> shareableCodes { get; set; }
+        public DbSet<CodeBox> codeBoxes { get; set; }
 
     }
 }
